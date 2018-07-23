@@ -1,11 +1,11 @@
-<h3>کاربران ما</h3>
+<h3> Usuarios  </h3>
 <app-alert></app-alert>
 <ul *ngFor="let user of users">
    <li>{{user.name}}</li>
 
 </ul>
-<h3>ثبت نام کنید</h3>
-    <button (click)="showDialog = !showDialog" class="btn btn-success btn-lg">ایجاد حساب</button>
+<h3> Registrar  </h3>
+    <button (click)="showDialog = !showDialog" class="btn btn-success btn-lg">Criar uma conta</button>
 
     <app-user-dialog   (cholo)="create($event)" [(visible)]="showDialog">
 

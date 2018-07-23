@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {FormControl, FormGroup, Validators,FormBuilder} from "@angular/forms";
+import {FormControl, FormGroup, Validators,FormBuilder} from '@angular/forms';
 
-import {User} from "../user";
+import {User} from '../user';
 
 @Component({
   selector: 'app-user-edit',
@@ -15,25 +15,25 @@ export class UserEditComponent implements OnInit {
 
   userEdit: User = new User();
   heroUser = new FormGroup({
-    name: new FormControl("",Validators.compose([
+    name: new FormControl( '' , Validators.compose([
       Validators.required,
       Validators.minLength(3),
-      //Validators.pattern('[\\w\\-\\s\\/]+')
+      // Validators.pattern('[\\w\\-\\s\\/]+')
     ])),
-    username: new FormControl("",Validators.compose([
+    username: new FormControl("", Validators.compose([
       Validators.required,
       Validators.minLength(3),
-      //Validators.pattern('[\\w\\-\\s\\/]+')
+      // Validators.pattern('[\\w\\-\\s\\/]+')
     ])),
-    email: new FormControl("",Validators.compose([
+    email: new FormControl("", Validators.compose([
       Validators.required,
       Validators.minLength(3),
-      //Validators.pattern('[\\w\\-\\s\\/]+')
+      // Validators.pattern('[\\w\\-\\s\\/]+')
     ])),
-    phone: new FormControl("",Validators.compose([
+    phone: new FormControl("", Validators.compose([
       Validators.required,
       Validators.minLength(3),
-      //Validators.pattern('[\\w\\-\\s\\/]+')
+      // Validators.pattern('[\\w\\-\\s\\/]+')
     ])),
     isok: new FormControl(true),
     id: new FormControl("")

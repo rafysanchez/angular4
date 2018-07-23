@@ -1,7 +1,7 @@
-import {Component, OnInit} from "@angular/core";
-import {User} from "./user";
-import {UserService} from "./user.service";
-import {AlertService} from "./alert.service";
+import {Component, OnInit} from '@angular/core';
+import {User} from './user';
+import {UserService} from './user.service';
+import {AlertService} from './alert.service';
 
 @Component({
     selector: 'app-user',
@@ -32,10 +32,10 @@ export class UserComponent implements OnInit {
     }
 
     create(user) {
-        let data = JSON.stringify(user);
+        const data = JSON.stringify(user);
         this._userService.create(data).subscribe(
             () => this.getUsers(),
-        error => alert('خطا در برقراری ارتباط با API '+error.json().message)
+        error => alert(' Error communicating with API ' + error.json().message)
         )
 
     }
@@ -47,7 +47,7 @@ export class UserComponent implements OnInit {
 
 
      update(user) {
-        let data = JSON.stringify(user);
+        const data = JSON.stringify(user);
 
          console.log(user);
          this._userService.update(data).subscribe(
