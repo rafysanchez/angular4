@@ -35,7 +35,7 @@ export class UserDialogComponent implements OnInit {
     this.visibleChange.emit(this.visible);
   }
 
-  create(user){
+  create(user) {
     this.cholo.emit(user);
     this.visibleChange.emit(this.visible = false);
   }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AlertService} from "../alert.service";
+import {AlertService} from '../alert.service';
 
 @Component({
   selector: 'app-alert',
@@ -16,5 +16,5 @@ export class AlertComponent implements OnInit {
     this.alert.getMessage().subscribe(message => { this.message = message; });
   }
 
-  $timeout
+//  $timeout
 }

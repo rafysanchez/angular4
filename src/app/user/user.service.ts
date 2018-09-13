@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { User } from './user';
 import { Http } from '@angular/http';
-import 'rxjs';
-import { Observable } from 'rxjs';
+import 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class UserService {
@@ -10,7 +10,7 @@ export class UserService {
 
   create(user) {
     return this._http.post(
-      'http://angularjs-angularcrud.7e14.starter-us-west-2.openshiftapps.com/api/create.php',
+      'http://jcpvipexecutivo.com/api/create.php',
       user
     );
   }
@@ -19,7 +19,7 @@ export class UserService {
     // tslint:disable-next-line:max-line-length
     return this._http
       .post(
-        'http://angularjs-angularcrud.7e14.starter-us-west-2.openshiftapps.com/api/delete.php',
+        'http://jcpvipexecutivo.com/api/delete.php',
         { id: user }
       )
       .map(() => this.getUsers());
@@ -28,7 +28,7 @@ export class UserService {
   update(user) {
     return this._http
       .post(
-        'http://angularjs-angularcrud.7e14.starter-us-west-2.openshiftapps.com/api/update.php',
+        'http://jcpvipexecutivo.com/api/update.php',
         user
       )
       .map(() => '');
@@ -38,7 +38,7 @@ export class UserService {
     // tslint:disable-next-line:max-line-length
     return this._http
       .get(
-        'http://angularjs-angularcrud.7e14.starter-us-west-2.openshiftapps.com/api/getAll.php'
+        'http://jcpvipexecutivo.com/api/getAll.php'
       )
       .map(data => data.json());
   }

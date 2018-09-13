@@ -20,29 +20,29 @@ class Db
         return $dbh;
     }
 }
-//class Db
-//{
-//    private $server = 'localhost';
-//    private $db = 'test';
-//    private $username = 'root';
-//    private $password = 'root';
-//    public $conn = null;
-//        function __construct()
-//        {
-//            try
-//            {
-//                $this->conn = new PDO('mysql:host='.$this->server.';'.'dbname='.$this->db, $this->username, $this->password);
-//                $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-//              //  return $this->conn;
-//            }
-//
-//            catch
-//            (PDOException $e) {
-//                die('an error ecoured' . $e->getMessage());
-//            }
-//
-//        }
-//
-//
-//
-//}
+class Db
+{
+   private $server = 'localhost';
+   private $db = 'JCP_DB';
+   private $username = 'rafael_sanchez';
+   private $password = '113001';
+   public $conn = null;
+       function __construct()
+       {
+           try
+           {
+               $this->conn = new PDO('mysql:host='.$this->server.';'.'dbname='.$this->db, $this->username, $this->password);
+               $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+             //  return $this->conn;
+           }
+
+           catch
+           (PDOException $e) {
+               die('an error ecoured' . $e->getMessage());
+           }
+
+       }
+
+
+
+}
