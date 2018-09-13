@@ -5,7 +5,7 @@ include ("db.class.php");
 $conn = new Db();
 $data = json_decode(file_get_contents("php://input"));
 
-$sql = "update `users` set 
+$sql = "update `Users` set 
         `name` = '$data->name',
         `username` = '$data->username',
         `email` = '$data->email',

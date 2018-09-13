@@ -1,7 +1,7 @@
 <?php
 
 include('db.class.php');
-$sql = "select * from users where 1";
+$sql = "select * from Users where 1";
 
 $obj = new Db();
 $stmt = $obj->conn->prepare($sql);

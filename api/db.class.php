@@ -2,7 +2,7 @@
 header("Access-Control-Allow-Origin: * ");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 
-class Db
+/* class Db
 {
 
     function __construct()
@@ -19,7 +19,7 @@ class Db
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $dbh;
     }
-}
+} */
 class Db
 {
    private $server = 'localhost';

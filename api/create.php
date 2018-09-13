@@ -7,7 +7,7 @@ $conn = new Db();
 $data = json_decode(file_get_contents("php://input"));
 
 if (isset($data->name) && isset($data->username)) {
-    $sql = "insert into users set 
+    $sql = "insert into Users set 
         `name`= '$data->name',
         `username`= '$data->username',
         `email`= '$data->email',
